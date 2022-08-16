@@ -36,7 +36,7 @@ def test_eight_components():
         except:
             break
 
-    with open("sample.json", "w") as outfile:
+    with open("sample.json", "w", indent =4 ) as outfile:
         json.dump(data, outfile) 
     
 

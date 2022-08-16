@@ -35,8 +35,8 @@ def perform():
         except:
             break
 
-    with open("sample.json", "w", indent =4 ) as outfile:
-        json.dump(data, outfile) 
+    with open("sample.json", "w") as outfile:
+        json.dump(data, outfile, indent =4 ) 
     
 
 

@@ -6,7 +6,7 @@ import json
 from selenium.webdriver.common.keys import Keys
 
 
-def test_eight_components():
+def perform():
     driver = webdriver.Chrome(service=ChromeService(executable_path=ChromeDriverManager().install()))
     driver.maximize_window()
     driver.get("https://summerofcode.withgoogle.com/programs/2022/organizations")
@@ -15,7 +15,6 @@ def test_eight_components():
     data = {}
     while True:
         orgs = driver.find_elements(by=By.CLASS_NAME, value="content")
-        ctr = 0
         for org in orgs:
             org_url = org.get_attribute("href")
             driver.execute_script("window.open('');")
@@ -41,4 +40,4 @@ def test_eight_components():
     
 
 
-test_eight_components() 
+perform() 
